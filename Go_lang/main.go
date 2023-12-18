@@ -13,10 +13,10 @@ func main() {
 	s := datastore.New()
 	h := handler.New(s)
 
-	app.GET("/students/{id}", h.GetPatientByID)
-	app.POST("/students", h.CreatePatient)
-	app.PUT("/students/{id}", h.validatePatientData)
-	app.DELETE("/students/{id}", h.DeletePatient)
+	app.GET("/patients/{id}", h.GetPatientByID)
+	app.POST("/patients", h.CreatePatient)
+	app.PUT("/patients/{id}", h.validatePatientData)
+	app.DELETE("/patients/{id}", h.DeletePatient)
 
 	// starting the server on a custom port
 	app.Server.HTTP.Port = 9092
